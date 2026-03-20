@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents Development — Rehnova Digitals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/details-pages.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M3 10L7 6L11 10L15 6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 14L7 10L11 14L15 10" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+      </svg>
+    </div>
+    <span class="nav-brand">Rehnova <span>Digitals</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="index.html#technologies">Stack</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="index.html#cta" class="nav-pill">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html#services">Services <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="index.html#about">About <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="index.html#pricing">Pricing <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="index.html#faq">FAQ <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="index.html#cta" class="mob-cta">Get a Quote →</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="svc-hero">
+  <!-- Circuit SVG background -->
+  <svg class="hero-circuit" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="hbg" cx="65%" cy="45%" r="55%">
+        <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.28"/>
+        <stop offset="100%" stop-color="#dbeafe" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1440" height="700" fill="url(#hbg)"/>
+    <g fill="none" stroke="#1a5fb4" stroke-opacity="0.1" stroke-width="1.3">
+      <path d="M860 40 L860 160 L1030 160 L1030 320"/>
+      <path d="M1100 80 L1100 240 L1260 240 L1260 400"/>
+      <path d="M790 400 L890 400 L890 540"/>
+      <path d="M1190 450 L1350 450 L1350 580"/>
+    </g>
+    <g fill="#1a5fb4" fill-opacity="0.16">
+      <rect x="857" y="157" width="6" height="6" rx="1.2"/>
+      <rect x="1027" y="317" width="6" height="6" rx="1.2"/>
+      <rect x="1257" y="237" width="6" height="6" rx="1.2"/>
+      <rect x="1257" y="397" width="6" height="6" rx="1.2"/>
+    </g>
+    <circle cx="1030" cy="320" r="4.5" fill="#1a5fb4" fill-opacity="0.2">
+      <animate attributeName="r" values="4.5;12;4.5" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.25;0;0.25" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1260" cy="400" r="4.5" fill="#0ea5e9" fill-opacity="0.18">
+      <animate attributeName="r" values="4.5;12;4.5" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.2;0;0.2" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Moving data dots -->
+    <circle r="2.5" fill="#1a5fb4" fill-opacity="0.4">
+      <animateMotion dur="4.5s" repeatCount="indefinite" path="M860,40 L860,160 L1030,160 L1030,320"/>
+    </circle>
+    <circle r="2.5" fill="#0ea5e9" fill-opacity="0.35">
+      <animateMotion dur="6s" begin="2s" repeatCount="indefinite" path="M1100,80 L1100,240 L1260,240 L1260,400"/>
+    </circle>
+  </svg>
+  <div class="hero-glow-orb"></div>
+
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="index.html#services">Services</a>
+        <span class="breadcrumb-sep">›</span>
+        <span style="color:var(--text);font-weight:600;">AI Agents Development</span>
+      </div>
+      <div class="svc-eyebrow"><div class="svc-eyebrow-dot"></div>Service 03 of 06</div>
+      <h1>Autonomous <em>AI</em><br>Agents</h1>
+      <p class="svc-hero-desc">Autonomous agents that plan, reason, and execute complex multi-step workflows without human intervention. Research, data pipelines, and reporting — on full autopilot.</p>
+      <div class="hero-tags">
+        <span class="s-tag">LangChain</span>
+        <span class="s-tag">AutoGen</span>
+        <span class="s-tag">CrewAI</span>
+        <span class="s-tag">Multi-Agent</span>
+        <span class="s-tag">Tool Use</span>
+        <span class="s-tag">Python</span>
+      </div>
+      <div class="hero-actions">
+        <a href="index.html#cta" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5h10M8 3l4.5 4.5L8 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Start Your Project
+        </a>
+       
+      </div>
+    </div>
+
+    <!-- RIGHT — service card (exact style from landing) -->
+    <div class="hero-right">
+      <div class="svc-card-hero">
+        <div class="svc-card-glow-hero"></div>
+        <div class="svc-top-bar" style="background:linear-gradient(90deg,#4f46e5,#818cf8)"></div>
+        <div class="svc-num">01 —</div>
+        <div class="svc-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22l4-9 5 5 3-6 4 4" stroke="#4f46e5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="6" r="4" stroke="#4f46e5" stroke-width="1.7"/><path d="M20 6h4M22 4v4" stroke="#4f46e5" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <h3>AI Agents Development</h3>
+        <p>Autonomous agents that plan and execute complex multi-step workflows. Research automation, data pipelines, and reporting — on full autopilot.</p>
+        <div class="svc-tags">
+          <span class="s-tag">LangChain</span>
+          <span class="s-tag">AutoGen</span>
+          <span class="s-tag">Multi-Agent</span>
+          <span class="s-tag">Tool Use</span>
+          <span class="s-tag">CrewAI</span>
+        </div>
+        <div class="card-stats">
+          <div class="cs-item">
+            <div class="cs-val" data-count="10">0<sup>x</sup></div>
+            <div class="cs-label">Faster Than Manual</div>
+          </div>
+          <div class="cs-item">
+            <div class="cs-val">24/7</div>
+            <div class="cs-label">Fully Autonomous</div>
+          </div>
+          <div class="cs-item">
+            <div class="cs-val" data-count="50">0<sup>+</sup></div>
+            <div class="cs-label">Agents Deployed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT WE DELIVER ── -->
+<section id="deliver" class="section-pad">
+  <div class="reveal" style="max-width:520px;margin-bottom:48px">
+    <div class="s-label">What We Deliver</div>
+    <h2 class="s-title">Everything Your <span class="grad">Agent Needs</span></h2>
+    <p class="s-desc">Every capability to build agents that plan, act, and deliver results — autonomously, reliably, and at scale.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card reveal" style="transition-delay:.05s">
+      <div class="fi" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 21l4-9 5 5 3-6 4 4" stroke="#4f46e5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="5" r="3" stroke="#4f46e5" stroke-width="1.4"/></svg>
+      </div>
+      <h3>Multi-Agent Orchestration</h3>
+      <p>Coordinate specialised agents — researcher, analyst, writer — working in parallel to complete complex tasks no single agent could handle alone.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.1s">
+      <div class="fi" style="background:linear-gradient(135deg,#dbeafe,#eff6ff)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v4M13 19v4M3 13h4M19 13h4" stroke="#1a5fb4" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="13" r="5" stroke="#1a5fb4" stroke-width="1.5"/></svg>
+      </div>
+      <h3>Autonomous Tool Use</h3>
+      <p>Agents that browse the web, call APIs, write and run code, query databases, send emails — all via function calling, without being told exactly how.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.15s">
+      <div class="fi" style="background:linear-gradient(135deg,#e0f4fe,#f0f9ff)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 20V9l9-5 9 5v11" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round"/><rect x="9" y="14" width="8" height="6" rx="1" stroke="#0ea5e9" stroke-width="1.5"/></svg>
+      </div>
+      <h3>Long-Horizon Planning</h3>
+      <p>Decompose a high-level goal into subtasks, adapt the plan as new information emerges, and recover from failures — like a junior employee, but 24/7.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.05s">
+      <div class="fi" style="background:linear-gradient(135deg,#ecfeff,#cffafe)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 21l4-8 5 5 3-5 4 3" stroke="#0891b2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Real-Time Monitoring</h3>
+      <p>Full execution logs, step-by-step task traces, success/failure metrics, and alerts. You always know exactly what your agents are doing and why.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.1s">
+      <div class="fi" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="9" stroke="#16a34a" stroke-width="1.5"/><path d="M9 13l3 3 5-5" stroke="#16a34a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Human-in-the-Loop Controls</h3>
+      <p>Define approval checkpoints for high-stakes actions. Agents pause and wait for your sign-off before sending emails, spending budget, or publishing.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.15s">
+      <div class="fi" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="4" stroke="#6366f1" stroke-width="1.5"/><path d="M8 10h10M8 14h7M8 18h9" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Custom Integrations</h3>
+      <p>Agents connect to your CRM, ERP, databases, email, Slack, and Google Workspace — reading, writing, and acting across your entire tech stack.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW WE WORK ── -->
+<section id="process" class="section-pad">
+  <svg class="pkg-bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="pgr" cx="30%" cy="60%" r="50%"><stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.18"/><stop offset="100%" stop-color="#bfdbfe" stop-opacity="0"/></radialGradient></defs><rect width="1440" height="600" fill="url(#pgr)"/></svg>
+  <div class="process-wrap" style="position:relative;z-index:1">
+    <div class="process-steps-col reveal-l">
+      <div class="s-label">Our Process</div>
+      <h2 class="s-title">How We<br><em>Deploy It</em></h2>
+      <p class="s-desc" style="margin-bottom:0;margin-top:10px">Four structured stages from use-case design to live autonomous execution — with safety checks at every step.</p>
+      <div class="steps-list">
+        <button class="step-btn active" data-step="0">
+          <div class="step-n">01</div>
+          <div class="step-text"><h4>Use-Case Mapping</h4><p>Define workflow and success criteria</p></div>
+        </button>
+        <button class="step-btn" data-step="1">
+          <div class="step-n">02</div>
+          <div class="step-text"><h4>Tool & API Setup</h4><p>Connect every external system</p></div>
+        </button>
+        <button class="step-btn" data-step="2">
+          <div class="step-n">03</div>
+          <div class="step-text"><h4>Agent Engineering</h4><p>Build, test, and add guardrails</p></div>
+        </button>
+        <button class="step-btn" data-step="3">
+          <div class="step-n">04</div>
+          <div class="step-text"><h4>Deploy & Monitor</h4><p>Live execution with full logging</p></div>
+        </button>
+      </div>
+    </div>
+    <div class="step-detail reveal-r">
+      <div class="step-pane" id="paneMain">
+        <div class="ghost-n" id="paneNum">01</div>
+        <h3 id="paneTitle">Use-Case Mapping</h3>
+        <p id="paneBody">We map the exact workflow the agent will automate, identify every decision point, define success criteria, and design the agent architecture before any code is written. You receive a full agent design document.</p>
+        <div class="deliverables" id="paneDels">
+          <span class="del-tag">Workflow diagram</span>
+          <span class="del-tag">Decision point map</span>
+          <span class="del-tag">Agent architecture doc</span>
+          <span class="del-tag">Success metrics</span>
+          <span class="del-tag">Risk & safety plan</span>
+        </div>
+      </div>
+      <div class="step-pane preview" id="panePreview">
+        <div class="ghost-n" id="previewNum">02</div>
+        <h3 id="previewTitle">Tool & API Setup</h3>
+        <p id="previewBody">Every external system the agent needs is connected and tested — APIs, databases, browsers, and communication channels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TECH STACK ── -->
+<section id="tech" class="section-pad">
+  <div class="reveal" style="max-width:480px;margin-bottom:10px">
+    <div class="s-label">Technology</div>
+    <h2 class="s-title">Our <span class="grad">Agent Stack</span></h2>
+    <p class="s-desc">Best-in-class AI frameworks, memory systems, and infrastructure chosen for reliable autonomous execution in production.</p>
+  </div>
+  <div class="tech-grid reveal" style="transition-delay:.08s">
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 17l4-8 4 4 3-4 3 3" stroke="#4f46e5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="ti-name">LangChain</div><div class="ti-type">Agent Framework</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#e0f4fe,#f0f9ff)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="#0ea5e9" stroke-width="1.4"/><path d="M8 11l2 2 4-4" stroke="#0ea5e9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="ti-name">AutoGen</div><div class="ti-type">Multi-Agent</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#fffbeb,#fef3c7)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2 4.5 5 .7-3.5 3.5.8 5L11 13.5l-4.3 2.2.8-5L4 7.2l5-.7L11 2z" stroke="#f59e0b" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="ti-name">CrewAI</div><div class="ti-type">Orchestration</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="6" stroke="#10a37f" stroke-width="1.5"/><circle cx="11" cy="11" r="2.5" fill="#10a37f" fill-opacity="0.5"/></svg></div>
+      <div><div class="ti-name">OpenAI GPT-4</div><div class="ti-type">Core LLM</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#fef2f2,#fee2e2)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M6 17l4-10 6 6 2-3" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="ti-name">Pinecone</div><div class="ti-type">Vector Memory</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="5" width="18" height="14" rx="3" stroke="#0891b2" stroke-width="1.5"/><path d="M6 5V4M10 5V4M2 9h18" stroke="#0891b2" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div><div class="ti-name">PostgreSQL</div><div class="ti-type">State Store</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="18" height="18" rx="3" stroke="#6366f1" stroke-width="1.5" opacity="0.5"/><path d="M7 11l3 3 5-5" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="ti-name">Redis</div><div class="ti-type">Cache</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="6" width="16" height="12" rx="2.5" stroke="#0284c7" stroke-width="1.5"/><path d="M8 6V4.5M11 6V3.5M14 6V4.5" stroke="#0284c7" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div><div class="ti-name">Python</div><div class="ti-type">Runtime</div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ── FAQ ── -->
+<section id="faq" class="section-pad">
+  <div class="faq-wrap">
+    <div class="faq-sticky reveal-l">
+      <div class="s-label">FAQ</div>
+      <h2 class="s-title">Common <span class="grad">Questions</span></h2>
+      <p class="faq-side-desc">Quick answers about our AI Agents service. Still have questions?</p>
+      <a href="index.html#cta" class="btn-primary" style="display:inline-flex">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Ask Us Directly
+      </a>
+    </div>
+    <div class="faq-list reveal-r">
+      <div class="faq-item open">
+        <div class="faq-q"><span>What kind of tasks can AI agents automate?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>Research and competitive intelligence, lead enrichment, report generation from raw data, social media scheduling, customer onboarding sequences, invoice processing, and any multi-step workflow involving data collection, analysis, and action.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>How do you prevent agents from making mistakes?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>We implement multiple safety layers: sandboxed testing, step-level logging, confidence thresholds, and human-in-the-loop approval gates for irreversible actions. Agents can read freely but require explicit permission for write, send, or publish actions.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>How long does it take to build a custom agent?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>A single-purpose agent is typically production-ready in 3–5 weeks. A multi-agent system takes 8–14 weeks. Timeline depends heavily on the number of external integrations and complexity of the workflow being automated.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can agents work with our internal databases?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>Yes. We build secure database connectors that agents query using generated SQL, with row-level permission controls. Agents can read, aggregate, and update records based on your defined access rules.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What monitoring is available post-launch?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>Every execution creates a full trace — every step, tool call, decision, input, and output. You get a monitoring dashboard, Slack/email alerts on failures, and weekly performance summaries showing ROI metrics.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I own the source code?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>100%. All agent code, prompt configurations, and documentation transfer to you on final payment. We sign NDAs before any project discussion and retain zero IP rights.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta-bottom" class="section-pad">
+  <div class="cta-box reveal">
+    <div class="cta-text">
+      <div class="cta-over">Ready to Build?</div>
+      <h2>Let's Build Your<br><em>AI Agents</em></h2>
+      <p>Tell us which workflows you want to automate. We'll send a scoping estimate and proposal within 24 hours.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="mailto:hello@rehnovadigitals.com" class="btn-white-solid">Start Your Project →</a>
+      <a href="index.html#cta" class="btn-ghost">Book a Free Call</a>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- Interactive circuit SVG for footer -->
+    <svg class="footer-svg-bg" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="fg1" cx="20%" cy="30%" r="50%">
+          <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15" />
+          <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="fg2" cx="80%" cy="70%" r="40%">
+          <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.12" />
+          <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="400" fill="url(#fg1)" />
+      <rect width="1440" height="400" fill="url(#fg2)" />
+      <!-- Grid lines -->
+      <g stroke="white" stroke-opacity="0.03" stroke-width="1">
+        <line x1="0" y1="80" x2="1440" y2="80" />
+        <line x1="0" y1="160" x2="1440" y2="160" />
+        <line x1="0" y1="240" x2="1440" y2="240" />
+        <line x1="0" y1="320" x2="1440" y2="320" />
+        <line x1="180" y1="0" x2="180" y2="400" />
+        <line x1="360" y1="0" x2="360" y2="400" />
+        <line x1="540" y1="0" x2="540" y2="400" />
+        <line x1="720" y1="0" x2="720" y2="400" />
+        <line x1="900" y1="0" x2="900" y2="400" />
+        <line x1="1080" y1="0" x2="1080" y2="400" />
+        <line x1="1260" y1="0" x2="1260" y2="400" />
+      </g>
+      <!-- Circuit traces -->
+      <g fill="none" stroke="#60a5fa" stroke-opacity="0.1" stroke-width="1.5">
+        <path d="M50 50 L180 50 L180 160 L300 160 L300 280 L50 280" />
+        <path d="M180 160 L180 280 L100 280" />
+        <path d="M400 30 L540 30 L540 130 L700 130 L700 250 L850 250" />
+        <path d="M540 130 L540 250 L400 250" />
+        <path d="M900 80 L1000 80 L1000 200 L1150 200 L1150 320 L1300 320" />
+        <path d="M1000 200 L1000 320 L1100 320" />
+        <path d="M1300 100 L1440 100" />
+        <path d="M0 350 L150 350 L150 280 L300 280" />
+      </g>
+      <!-- Circuit nodes -->
+      <g fill="#60a5fa" fill-opacity="0.2">
+        <circle cx="180" cy="50" r="4" />
+        <circle cx="180" cy="160" r="4" />
+        <circle cx="300" cy="160" r="3" />
+        <circle cx="540" cy="30" r="4" />
+        <circle cx="540" cy="130" r="4" />
+        <circle cx="700" cy="130" r="3" />
+        <circle cx="700" cy="250" r="4" />
+        <circle cx="1000" cy="80" r="4" />
+        <circle cx="1000" cy="200" r="4" />
+        <circle cx="1150" cy="200" r="3" />
+        <circle cx="1150" cy="320" r="4" />
+        <circle cx="150" cy="350" r="3" />
+      </g>
+      <!-- Animated pulses -->
+      <circle cx="300" cy="160" r="6" fill="none" stroke="#60a5fa" stroke-opacity="0.25" stroke-width="1.5">
+        <animate attributeName="r" values="3;10;3" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.25;0;0.25" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="700" cy="250" r="6" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1.5">
+        <animate attributeName="r" values="3;10;3" dur="3.5s" begin="1.2s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.2;0;0.2" dur="3.5s" begin="1.2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="1150" cy="200" r="6" fill="none" stroke="#60a5fa" stroke-opacity="0.2" stroke-width="1.5">
+        <animate attributeName="r" values="3;9;3" dur="5s" begin="2s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.2;0;0.2" dur="5s" begin="2s" repeatCount="indefinite" />
+      </circle>
+      <!-- Hexagons -->
+      <g fill="none" stroke="#60a5fa" stroke-opacity="0.07" stroke-width="1">
+        <polygon points="1350,40 1380,57 1380,91 1350,108 1320,91 1320,57" />
+        <polygon points="60,310 88,327 88,361 60,378 32,361 32,327" />
+      </g>
+    </svg>
+
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="foot-logo">
+          <div class="foot-logo-mark">
+           <img src="https://res.cloudinary.com/dhcayqpqr/image/upload/v1773966188/20260320_052132_0000_evrmup.png" style="height: 50px;" alt="">
+          </div>
+          <span class="foot-brandname">Rehnova <span>Digitals</span></span>
+        </a>
+        <p class="foot-desc">We build digital solutions that move businesses forward — from custom web apps and AI
+          chatbots to enterprise management systems.</p>
+        <div class="foot-socials">
+          <a href="#" class="fs-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="1" y="1" width="14" height="14" rx="3" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <path d="M5 6.5V11M5 4.5V5M8 11V8.5C8 7.4 9 6.5 10 6.5S12 7.4 12 8.5V11" stroke="rgba(255,255,255,0.35)"
+                stroke-width="1.2" stroke-linecap="round" />
+            </svg></a>
+          <a href="#" class="fs-link" aria-label="Twitter/X"><svg width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <path d="M2 2l12 12M2 14L14 2" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"
+                stroke-linecap="round" />
+            </svg></a>
+          <a href="#" class="fs-link" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M5 14c0 .8 0 1.3-.8 1.8M11 14c0 .8 0 1.3.8 1.8M4.5 6.5c-.3-.6-.6-1.8.5-3M11.5 6.5c.3-.6.6-1.8-.5-3M8 12c-2.5 0-4-1.5-4-4s1.5-3.5 4-3.5 4 1 4 3.5-1.5 4-4 4z"
+                stroke="rgba(255,255,255,0.35)" stroke-width="1.1" stroke-linecap="round" />
+            </svg></a>
+          <a href="#" class="fs-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <rect x="1" y="1" width="14" height="14" rx="3.5" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <circle cx="8" cy="8" r="3" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <circle cx="11.5" cy="4.5" r=".7" fill="rgba(255,255,255,0.35)" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul class="foot-links">
+          <li><a href="index.html#services">Web Development</a></li>
+          <li><a href="index.html#services">AI Chatbots</a></li>
+          <li><a href="index.html#services">AI Agents</a></li>
+          <li><a href="index.html#services">Management Systems</a></li>
+          <li><a href="index.html#services">API Integration</a></li>
+          <li><a href="index.html#services">UI/UX Design</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul class="foot-links">
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index#process">Our Process</a></li>
+          <li><a href="index.html#quality">Why Rehnova</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <ul class="foot-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#technologies">Tech Stack</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-copy">© 2025 <span>Rehnova Digitals</span>. All rights reserved. Crafted with precision.</div>
+      <div class="foot-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="static/js/ai-agents-page.js"></script>
+
+</body>
+</html>

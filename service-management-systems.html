@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Management Systems — Rehnova Digitals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/details-pages.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="rehnova-blue.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M3 10L7 6L11 10L15 6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 14L7 10L11 14L15 10" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+      </svg>
+    </div>
+    <span class="nav-brand">Rehnova <span>Digitals</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="rehnova-blue.html#services">Services</a></li>
+    <li><a href="rehnova-blue.html#about">About</a></li>
+    <li><a href="rehnova-blue.html#process">Process</a></li>
+    <li><a href="rehnova-blue.html#technologies">Stack</a></li>
+    <li><a href="rehnova-blue.html#pricing">Pricing</a></li>
+    <li><a href="rehnova-blue.html#cta" class="nav-pill">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="rehnova-blue.html#services">Services <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="rehnova-blue.html#about">About <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="rehnova-blue.html#pricing">Pricing <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="rehnova-blue.html#faq">FAQ <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="rehnova-blue.html#cta" class="mob-cta">Get a Quote →</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="svc-hero">
+  <!-- Circuit SVG background -->
+  <svg class="hero-circuit" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="hbg" cx="65%" cy="45%" r="55%">
+        <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.28"/>
+        <stop offset="100%" stop-color="#dbeafe" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1440" height="700" fill="url(#hbg)"/>
+    <g fill="none" stroke="#1a5fb4" stroke-opacity="0.1" stroke-width="1.3">
+      <path d="M860 40 L860 160 L1030 160 L1030 320"/>
+      <path d="M1100 80 L1100 240 L1260 240 L1260 400"/>
+      <path d="M790 400 L890 400 L890 540"/>
+      <path d="M1190 450 L1350 450 L1350 580"/>
+    </g>
+    <g fill="#1a5fb4" fill-opacity="0.16">
+      <rect x="857" y="157" width="6" height="6" rx="1.2"/>
+      <rect x="1027" y="317" width="6" height="6" rx="1.2"/>
+      <rect x="1257" y="237" width="6" height="6" rx="1.2"/>
+      <rect x="1257" y="397" width="6" height="6" rx="1.2"/>
+    </g>
+    <circle cx="1030" cy="320" r="4.5" fill="#1a5fb4" fill-opacity="0.2">
+      <animate attributeName="r" values="4.5;12;4.5" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.25;0;0.25" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1260" cy="400" r="4.5" fill="#0ea5e9" fill-opacity="0.18">
+      <animate attributeName="r" values="4.5;12;4.5" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.2;0;0.2" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Moving data dots -->
+    <circle r="2.5" fill="#1a5fb4" fill-opacity="0.4">
+      <animateMotion dur="4.5s" repeatCount="indefinite" path="M860,40 L860,160 L1030,160 L1030,320"/>
+    </circle>
+    <circle r="2.5" fill="#0ea5e9" fill-opacity="0.35">
+      <animateMotion dur="6s" begin="2s" repeatCount="indefinite" path="M1100,80 L1100,240 L1260,240 L1260,400"/>
+    </circle>
+  </svg>
+  <div class="hero-glow-orb"></div>
+
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="breadcrumb">
+        <a href="rehnova-blue.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="rehnova-blue.html#services">Services</a>
+        <span class="breadcrumb-sep">›</span>
+        <span style="color:var(--text);font-weight:600;">Management Systems</span>
+      </div>
+      <div class="svc-eyebrow"><div class="svc-eyebrow-dot"></div>Service 04 of 06</div>
+      <h1>Custom <em>Management</em><br>Systems</h1>
+      <p class="svc-hero-desc">Custom ERP, CRM, HRMS, and inventory platforms with powerful dashboards, real-time analytics, and role-based access — built for your exact operations.</p>
+      <div class="hero-tags">
+        <span class="s-tag">ERP</span>
+        <span class="s-tag">CRM</span>
+        <span class="s-tag">HRMS</span>
+        <span class="s-tag">Dashboards</span>
+        <span class="s-tag">Analytics</span>
+        <span class="s-tag">Role-Based Access</span>
+      </div>
+      <div class="hero-actions">
+        <a href="rehnova-blue.html#cta" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5h10M8 3l4.5 4.5L8 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Start Your Project
+        </a>
+        <a href="#packages" class="btn-secondary">View Packages</a>
+      </div>
+    </div>
+
+    <!-- RIGHT — service card (exact style from landing) -->
+    <div class="hero-right">
+      <div class="svc-card-hero">
+        <div class="svc-card-glow-hero"></div>
+        <div class="svc-top-bar" style="background:linear-gradient(90deg,#0891b2,#06b6d4)"></div>
+        <div class="svc-num">01 —</div>
+        <div class="svc-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#0891b2" stroke-width="1.7"/><path d="M8 10h12M8 14h9M8 18h11" stroke="#0891b2" stroke-width="1.7" stroke-linecap="round"/><circle cx="21" cy="7" r="3.5" fill="#0891b2" fill-opacity="0.15" stroke="#0891b2" stroke-width="1.3"/><path d="M20 7h2M21 6v2" stroke="#0891b2" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Management Systems</h3>
+        <p>Custom ERP, CRM, HRMS, and inventory platforms with powerful dashboards, real-time analytics, and role-based access — built for your operations.</p>
+        <div class="svc-tags">
+          <span class="s-tag">ERP</span>
+          <span class="s-tag">CRM</span>
+          <span class="s-tag">HRMS</span>
+          <span class="s-tag">Dashboards</span>
+          <span class="s-tag">Analytics</span>
+        </div>
+        <div class="card-stats">
+          <div class="cs-item">
+            <div class="cs-val" data-count="40">0<sup>+</sup></div>
+            <div class="cs-label">Systems Deployed</div>
+          </div>
+          <div class="cs-item">
+            <div class="cs-val">99.9<sup>%</sup></div>
+            <div class="cs-label">Uptime SLA</div>
+          </div>
+          <div class="cs-item">
+            <div class="cs-val" data-count="5">0<sup>yr</sup></div>
+            <div class="cs-label">Enterprise Exp.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT WE DELIVER ── -->
+<section id="deliver" class="section-pad">
+  <div class="reveal" style="max-width:520px;margin-bottom:48px">
+    <div class="s-label">What We Deliver</div>
+    <h2 class="s-title">Everything Your <span class="grad">System Needs</span></h2>
+    <p class="s-desc">Every capability to build powerful, user-friendly management platforms that streamline operations and give leadership real-time visibility.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card reveal" style="transition-delay:.05s">
+      <div class="fi" style="background:linear-gradient(135deg,#ecfeff,#cffafe)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="4" stroke="#0891b2" stroke-width="1.6"/><path d="M7 9h12M7 13h9M7 17h11" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Custom ERP & CRM</h3>
+      <p>Bespoke enterprise resource planning and customer relationship management platforms built around your exact workflows — not the other way around.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.1s">
+      <div class="fi" style="background:linear-gradient(135deg,#dbeafe,#eff6ff)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 21l4-8 5 5 3-5 4 3" stroke="#1a5fb4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Real-Time Dashboards</h3>
+      <p>Live KPI dashboards with interactive charts, custom report builders, and drill-down analytics that give leadership instant operational visibility.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.15s">
+      <div class="fi" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="4" stroke="#4f46e5" stroke-width="1.5" opacity="0.5"/><path d="M8 9h6M8 13h4M8 17h8" stroke="#4f46e5" stroke-width="1.5" stroke-linecap="round"/><circle cx="18" cy="9" r="3" stroke="#4f46e5" stroke-width="1.3"/></svg>
+      </div>
+      <h3>Role-Based Access Control</h3>
+      <p>Granular permission systems with custom roles, department-level data isolation, and audit logs — so every user sees exactly what they should.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.05s">
+      <div class="fi" style="background:linear-gradient(135deg,#e0f4fe,#f0f9ff)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v4M13 19v4M3 13h4M19 13h4" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="13" r="5" stroke="#0ea5e9" stroke-width="1.5"/></svg>
+      </div>
+      <h3>Third-Party Integrations</h3>
+      <p>Seamlessly connect with accounting software, payroll providers, communication tools, and legacy systems via REST, GraphQL, or custom middleware.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.1s">
+      <div class="fi" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 20V9l9-5 9 5v11" stroke="#16a34a" stroke-width="1.6" stroke-linecap="round"/><rect x="9" y="14" width="8" height="6" rx="1" stroke="#16a34a" stroke-width="1.5"/></svg>
+      </div>
+      <h3>Workflow Automation</h3>
+      <p>Automate repetitive approval chains, notifications, status updates, and data entry — eliminating manual bottlenecks across every department.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:.15s">
+      <div class="fi" style="background:linear-gradient(135deg,#fef3c7,#fffbeb)">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 4l2.5 5.5 6 .8-4.3 4.2 1 6L13 17.5l-5.2 3 1-6L4.5 10.3l6-.8L13 4z" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Mobile-Ready & Offline</h3>
+      <p>Progressive web apps with offline capabilities — field teams can log data on-site with no connection, syncing automatically when back online.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW WE WORK ── -->
+<section id="process" class="section-pad">
+  <svg class="pkg-bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="pgr" cx="30%" cy="60%" r="50%"><stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.18"/><stop offset="100%" stop-color="#bfdbfe" stop-opacity="0"/></radialGradient></defs><rect width="1440" height="600" fill="url(#pgr)"/></svg>
+  <div class="process-wrap" style="position:relative;z-index:1">
+    <div class="process-steps-col reveal-l">
+      <div class="s-label">Our Process</div>
+      <h2 class="s-title">How We<br><em>Deliver It</em></h2>
+      <p class="s-desc" style="margin-bottom:0;margin-top:10px">Five clear stages from process mapping to go-live — with hands-on training and a dedicated support period.</p>
+      <div class="steps-list">
+        <button class="step-btn active" data-step="0">
+          <div class="step-n">01</div>
+          <div class="step-text"><h4>Process Mapping</h4><p>Audit workflows and pain points</p></div>
+        </button>
+        <button class="step-btn" data-step="1">
+          <div class="step-n">02</div>
+          <div class="step-text"><h4>System Design</h4><p>Data model, roles, integrations</p></div>
+        </button>
+        <button class="step-btn" data-step="2">
+          <div class="step-n">03</div>
+          <div class="step-text"><h4>UI Design</h4><p>Dashboards, forms, flows</p></div>
+        </button>
+        <button class="step-btn" data-step="3">
+          <div class="step-n">04</div>
+          <div class="step-text"><h4>Development</h4><p>Sprints, live staging demos</p></div>
+        </button>
+        <button class="step-btn" data-step="4">
+          <div class="step-n">05</div>
+          <div class="step-text"><h4>Migration & Go-Live</h4><p>Data import, training, launch</p></div>
+        </button>
+      </div>
+    </div>
+    <div class="step-detail reveal-r">
+      <div class="step-pane" id="paneMain">
+        <div class="ghost-n" id="paneNum">01</div>
+        <h3 id="paneTitle">Process Mapping & Audit</h3>
+        <p id="paneBody">We deeply audit your current workflows, identify bottlenecks, and map every process the system must support. You receive a full System Requirements Document before any design or development begins.</p>
+        <div class="deliverables" id="paneDels">
+          <span class="del-tag">Workflow audit report</span>
+          <span class="del-tag">Process flow diagrams</span>
+          <span class="del-tag">Pain point analysis</span>
+          <span class="del-tag">System requirements doc</span>
+          <span class="del-tag">Project timeline</span>
+        </div>
+      </div>
+      <div class="step-pane preview" id="panePreview">
+        <div class="ghost-n" id="previewNum">02</div>
+        <h3 id="previewTitle">System Design</h3>
+        <p id="previewBody">Data model, role hierarchy, module architecture, and third-party integrations fully designed before development begins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TECH STACK ── -->
+<section id="tech" class="section-pad">
+  <div class="reveal" style="max-width:480px;margin-bottom:10px">
+    <div class="s-label">Technology</div>
+    <h2 class="s-title">Our <span class="grad">Tech Stack</span></h2>
+    <p class="s-desc">Proven enterprise technologies chosen for reliability, scalability, and long-term maintainability of mission-critical business systems.</p>
+  </div>
+  <div class="tech-grid reveal" style="transition-delay:.08s">
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="#0891b2" stroke-width="1.5"/><circle cx="11" cy="11" r="3" fill="#0891b2" fill-opacity="0.3"/><path d="M4 11h14" stroke="#0891b2" stroke-width="1.2" stroke-opacity="0.4"/><ellipse cx="11" cy="11" rx="4" ry="7" stroke="#0891b2" stroke-width="1.2" stroke-opacity="0.3"/></svg></div>
+      <div><div class="ti-name">React / Next.js</div><div class="ti-type">Frontend</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#dbeafe,#eff6ff)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 17V8l7-4 7 4v9" stroke="#1a5fb4" stroke-width="1.5" stroke-linecap="round"/><rect x="8" y="12" width="6" height="5" rx="1" stroke="#1a5fb4" stroke-width="1.3"/></svg></div>
+      <div><div class="ti-name">Node.js</div><div class="ti-type">Backend</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="18" height="18" rx="3" stroke="#4f46e5" stroke-width="1.5" opacity="0.5"/><path d="M6 8h10M6 11h8M6 14h10" stroke="#4f46e5" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div><div class="ti-name">TypeScript</div><div class="ti-type">Type Safety</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="5" width="18" height="14" rx="3" stroke="#0891b2" stroke-width="1.5"/><path d="M6 5V4M10 5V4M2 9h18" stroke="#0891b2" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="14" r="1.5" fill="#0891b2" fill-opacity="0.5"/></svg></div>
+      <div><div class="ti-name">PostgreSQL</div><div class="ti-type">Database</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#fef2f2,#fee2e2)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L4 5.5v8L11 17l7-3.5v-8L11 2z" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="10" r="2" stroke="#ef4444" stroke-width="1.3"/></svg></div>
+      <div><div class="ti-name">Redis</div><div class="ti-type">Caching</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 18V8l7-4 7 4v10l-7 3-7-3z" stroke="#0284c7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="ti-name">AWS / GCP</div><div class="ti-type">Cloud</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="5" width="18" height="14" rx="2.5" stroke="#6366f1" stroke-width="1.5"/><circle cx="11" cy="12" r="3" stroke="#6366f1" stroke-width="1.3"/><path d="M6 5V4M11 5V3M16 5V4" stroke="#6366f1" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <div><div class="ti-name">Docker / K8s</div><div class="ti-type">Infrastructure</div></div>
+    </div>
+    <div class="tech-item">
+      <div class="ti-icon" style="background:linear-gradient(135deg,#fffbeb,#fef3c7)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M6 16l5-10 5 10M7.5 13h9" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="ti-name">Chart.js / D3</div><div class="ti-type">Data Viz</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PACKAGES ── -->
+<section id="packages" class="section-pad">
+  <svg class="pkg-bg" viewBox="0 0 1440 680" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="pkgr2" cx="50%" cy="45%" r="58%"><stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.2"/><stop offset="100%" stop-color="#bfdbfe" stop-opacity="0"/></radialGradient></defs><rect width="1440" height="680" fill="url(#pkgr2)"/></svg>
+  <div class="pkg-header reveal">
+    <div class="s-label" style="justify-content:center">Packages</div>
+    <h2 class="s-title">Management System <span class="grad">Packages</span></h2>
+    <p class="s-desc">Transparent, fixed pricing. Full source code ownership, training, and post-launch support in every package.</p>
+  </div>
+  <div class="pkg-grid">
+    <div class="pkg-card reveal" style="transition-delay:.06s">
+      <div class="pkg-tier">Starter</div>
+      <div class="pkg-name">Department System</div>
+      <div class="pkg-desc">A focused management system for a single department — inventory, HR, or customer tracking with dashboards and reporting.</div>
+      <ul class="pkg-feats">
+        <li>Single-module management system</li>
+        <li>Role-based access control</li>
+        <li>Custom dashboard + reports</li>
+        <li>Data import from existing tools</li>
+        <li>Up to 3 integrations</li>
+        <li>Staff training session</li>
+        <li>60-day post-launch support</li>
+      </ul>
+      <a href="rehnova-blue.html#cta" class="pkg-btn pkg-btn-light">From $4,999 — Get Started</a>
+    </div>
+    <div class="pkg-card featured reveal" style="transition-delay:.12s">
+      <div class="pkg-badge">Most Popular</div>
+      <div class="pkg-tier">Growth</div>
+      <div class="pkg-name">Business Platform</div>
+      <div class="pkg-desc">A complete multi-module business management platform with CRM, inventory, HR, and a unified executive dashboard.</div>
+      <ul class="pkg-feats">
+        <li>Multi-module platform (up to 5)</li>
+        <li>Unified executive dashboard</li>
+        <li>Advanced role & permission system</li>
+        <li>Up to 8 third-party integrations</li>
+        <li>Workflow automation engine</li>
+        <li>Full data migration support</li>
+        <li>Staff training (up to 3 sessions)</li>
+        <li>90-day post-launch support</li>
+      </ul>
+      <a href="rehnova-blue.html#cta" class="pkg-btn pkg-btn-white">From $12,999 — Start Now</a>
+    </div>
+    <div class="pkg-card reveal" style="transition-delay:.18s">
+      <div class="pkg-tier">Enterprise</div>
+      <div class="pkg-name">Enterprise ERP</div>
+      <div class="pkg-desc">A full bespoke ERP system with unlimited modules, multi-branch support, and a dedicated implementation team.</div>
+      <ul class="pkg-feats">
+        <li>Unlimited custom modules</li>
+        <li>Multi-branch / multi-tenant</li>
+        <li>Unlimited integrations</li>
+        <li>Custom reporting engine</li>
+        <li>Dedicated implementation team</li>
+        <li>Full historical data migration</li>
+        <li>99.9% uptime SLA</li>
+        <li>12-month support contract</li>
+      </ul>
+      <a href="rehnova-blue.html#cta" class="pkg-btn pkg-btn-light">Custom Quote — Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" class="section-pad">
+  <div class="faq-wrap">
+    <div class="faq-sticky reveal-l">
+      <div class="s-label">FAQ</div>
+      <h2 class="s-title">Common <span class="grad">Questions</span></h2>
+      <p class="faq-side-desc">Quick answers about our Management Systems service. Still have questions?</p>
+      <a href="rehnova-blue.html#cta" class="btn-primary" style="display:inline-flex">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Ask Us Directly
+      </a>
+    </div>
+    <div class="faq-list reveal-r">
+      <div class="faq-item open">
+        <div class="faq-q"><span>Can you replace our existing software?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>Yes. We handle full data migration from your existing ERP, spreadsheets, or legacy systems. We run old and new systems in parallel during a transition period so your operations never stop.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>How do you handle our existing data?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>We write custom migration scripts to clean, transform, and import your historical data. Every migration is verified against checksums before go-live. No data is lost or corrupted in the process.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What's the typical build timeline?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>A single-module department system takes 6–10 weeks. A full multi-module business platform typically runs 3–5 months. Enterprise ERP implementations range from 5–9 months depending on module count and integration complexity.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can non-technical staff use the system?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>Absolutely — usability for daily business users is our top design priority. Every system includes staff training sessions, in-app help documentation, and an admin panel that requires no technical knowledge to operate.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can it connect to our existing tools?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>Yes. We integrate with accounting software (Xero, QuickBooks), payroll systems, communication tools (Slack, Teams), and legacy databases via REST APIs, webhooks, or custom middleware connectors.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I own the source code?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-ans"><p>100%. All source code, database schemas, and documentation transfer to you on final payment. We sign NDAs before any project discussion and retain zero IP rights.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta-bottom" class="section-pad">
+  <div class="cta-box reveal">
+    <div class="cta-text">
+      <div class="cta-over">Ready to Build?</div>
+      <h2>Let's Build Your<br><em>Management System</em></h2>
+      <p>Tell us about your current workflows and pain points. We'll send a scoping estimate within 24 hours.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="mailto:hello@rehnovadigitals.com" class="btn-white-solid">Start Your Project →</a>
+      <a href="rehnova-blue.html#cta" class="btn-ghost">Book a Free Call</a>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- Interactive circuit SVG for footer -->
+    <svg class="footer-svg-bg" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="fg1" cx="20%" cy="30%" r="50%">
+          <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15" />
+          <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="fg2" cx="80%" cy="70%" r="40%">
+          <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.12" />
+          <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="400" fill="url(#fg1)" />
+      <rect width="1440" height="400" fill="url(#fg2)" />
+      <!-- Grid lines -->
+      <g stroke="white" stroke-opacity="0.03" stroke-width="1">
+        <line x1="0" y1="80" x2="1440" y2="80" />
+        <line x1="0" y1="160" x2="1440" y2="160" />
+        <line x1="0" y1="240" x2="1440" y2="240" />
+        <line x1="0" y1="320" x2="1440" y2="320" />
+        <line x1="180" y1="0" x2="180" y2="400" />
+        <line x1="360" y1="0" x2="360" y2="400" />
+        <line x1="540" y1="0" x2="540" y2="400" />
+        <line x1="720" y1="0" x2="720" y2="400" />
+        <line x1="900" y1="0" x2="900" y2="400" />
+        <line x1="1080" y1="0" x2="1080" y2="400" />
+        <line x1="1260" y1="0" x2="1260" y2="400" />
+      </g>
+      <!-- Circuit traces -->
+      <g fill="none" stroke="#60a5fa" stroke-opacity="0.1" stroke-width="1.5">
+        <path d="M50 50 L180 50 L180 160 L300 160 L300 280 L50 280" />
+        <path d="M180 160 L180 280 L100 280" />
+        <path d="M400 30 L540 30 L540 130 L700 130 L700 250 L850 250" />
+        <path d="M540 130 L540 250 L400 250" />
+        <path d="M900 80 L1000 80 L1000 200 L1150 200 L1150 320 L1300 320" />
+        <path d="M1000 200 L1000 320 L1100 320" />
+        <path d="M1300 100 L1440 100" />
+        <path d="M0 350 L150 350 L150 280 L300 280" />
+      </g>
+      <!-- Circuit nodes -->
+      <g fill="#60a5fa" fill-opacity="0.2">
+        <circle cx="180" cy="50" r="4" />
+        <circle cx="180" cy="160" r="4" />
+        <circle cx="300" cy="160" r="3" />
+        <circle cx="540" cy="30" r="4" />
+        <circle cx="540" cy="130" r="4" />
+        <circle cx="700" cy="130" r="3" />
+        <circle cx="700" cy="250" r="4" />
+        <circle cx="1000" cy="80" r="4" />
+        <circle cx="1000" cy="200" r="4" />
+        <circle cx="1150" cy="200" r="3" />
+        <circle cx="1150" cy="320" r="4" />
+        <circle cx="150" cy="350" r="3" />
+      </g>
+      <!-- Animated pulses -->
+      <circle cx="300" cy="160" r="6" fill="none" stroke="#60a5fa" stroke-opacity="0.25" stroke-width="1.5">
+        <animate attributeName="r" values="3;10;3" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.25;0;0.25" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="700" cy="250" r="6" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1.5">
+        <animate attributeName="r" values="3;10;3" dur="3.5s" begin="1.2s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.2;0;0.2" dur="3.5s" begin="1.2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="1150" cy="200" r="6" fill="none" stroke="#60a5fa" stroke-opacity="0.2" stroke-width="1.5">
+        <animate attributeName="r" values="3;9;3" dur="5s" begin="2s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.2;0;0.2" dur="5s" begin="2s" repeatCount="indefinite" />
+      </circle>
+      <!-- Hexagons -->
+      <g fill="none" stroke="#60a5fa" stroke-opacity="0.07" stroke-width="1">
+        <polygon points="1350,40 1380,57 1380,91 1350,108 1320,91 1320,57" />
+        <polygon points="60,310 88,327 88,361 60,378 32,361 32,327" />
+      </g>
+    </svg>
+
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="foot-logo">
+          <div class="foot-logo-mark">
+           <img src="https://res.cloudinary.com/dhcayqpqr/image/upload/v1773966188/20260320_052132_0000_evrmup.png" style="height: 50px;" alt="">
+          </div>
+          <span class="foot-brandname">Rehnova <span>Digitals</span></span>
+        </a>
+        <p class="foot-desc">We build digital solutions that move businesses forward — from custom web apps and AI
+          chatbots to enterprise management systems.</p>
+        <div class="foot-socials">
+          <a href="#" class="fs-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="1" y="1" width="14" height="14" rx="3" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <path d="M5 6.5V11M5 4.5V5M8 11V8.5C8 7.4 9 6.5 10 6.5S12 7.4 12 8.5V11" stroke="rgba(255,255,255,0.35)"
+                stroke-width="1.2" stroke-linecap="round" />
+            </svg></a>
+          <a href="#" class="fs-link" aria-label="Twitter/X"><svg width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <path d="M2 2l12 12M2 14L14 2" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"
+                stroke-linecap="round" />
+            </svg></a>
+          <a href="#" class="fs-link" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M5 14c0 .8 0 1.3-.8 1.8M11 14c0 .8 0 1.3.8 1.8M4.5 6.5c-.3-.6-.6-1.8.5-3M11.5 6.5c.3-.6.6-1.8-.5-3M8 12c-2.5 0-4-1.5-4-4s1.5-3.5 4-3.5 4 1 4 3.5-1.5 4-4 4z"
+                stroke="rgba(255,255,255,0.35)" stroke-width="1.1" stroke-linecap="round" />
+            </svg></a>
+          <a href="#" class="fs-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <rect x="1" y="1" width="14" height="14" rx="3.5" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <circle cx="8" cy="8" r="3" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <circle cx="11.5" cy="4.5" r=".7" fill="rgba(255,255,255,0.35)" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul class="foot-links">
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">AI Chatbots</a></li>
+          <li><a href="#services">AI Agents</a></li>
+          <li><a href="#services">Management Systems</a></li>
+          <li><a href="#services">API Integration</a></li>
+          <li><a href="#services">UI/UX Design</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul class="foot-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#quality">Why Rehnova</a></li>
+          <li><a href="#testimonials">Case Studies</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#cta">Careers</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <ul class="foot-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#technologies">Tech Stack</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-copy">© 2025 <span>Rehnova Digitals</span>. All rights reserved. Crafted with precision.</div>
+      <div class="foot-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="static/js/management-page.js"></script>
+</body>
+</html>
