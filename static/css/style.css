@@ -323,7 +323,6 @@
       font-weight: 600;
       color: var(--accent);
       letter-spacing: 0.07em;
-      text-transform: uppercase;
       margin-bottom: 26px;
       opacity: 0;
       animation: slideUp 0.7s 0.1s forwards;
