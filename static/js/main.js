@@ -656,3 +656,166 @@ document.getElementById("bookBtn2").addEventListener("click", () => {
 document.getElementById("close-book-model").addEventListener("click", () => {
    BookingModal.close();
 });
+
+
+/* ═══════════════════════════════════════════════
+   CONTACT FORM — Submit + Success State
+   Replace ENDPOINT with your actual API URL
+═══════════════════════════════════════════════ */
+
+(function () {
+
+  var ENDPOINT = 'https://qbs.onrender.com/webhook/booking-path';
+
+  var form     = document.getElementById('cm-form');
+  var submit   = document.getElementById('cm-submit');
+  var spinner  = document.getElementById('cm-spinner');
+  var arrow    = document.getElementById('cm-arrow');
+  var label    = document.querySelector('.cm-submit-label');
+  var success  = document.getElementById('cm-success');
+  var textarea = document.getElementById('cm-message');
+  var charEl   = document.getElementById('cm-chars');
+
+  /* ── CHAR COUNTER ── */
+  if (textarea && charEl) {
+    textarea.addEventListener('input', function () {
+      var len = textarea.value.length;
+      charEl.textContent = len + ' / 600';
+      charEl.classList.toggle('warn', len > 510);
+    });
+  }
+
+  /* ── CLEAR ERRORS ON TYPE ── */
+  document.querySelectorAll('.cm-input, .cm-select, .cm-textarea').forEach(function (el) {
+    el.addEventListener('input', function () {
+      el.classList.remove('error');
+      var errId = 'cm-err-' + el.id.replace('cm-', '');
+      var err = document.getElementById(errId);
+      if (err) err.classList.remove('show');
+    });
+  });
+
+  /* ── VALIDATE ── */
+  function validate() {
+    var ok = true;
+
+    function chk(id, test, errId) {
+      var el  = document.getElementById(id);
+      var err = document.getElementById(errId);
+      if (!el) return;
+      var fail = !test((el.value || '').trim());
+      el.classList.toggle('error', fail);
+      if (err) err.classList.toggle('show', fail);
+      if (fail) ok = false;
+    }
+
+    chk('cm-fname',   function (v) { return v.length > 0; },                              'cm-err-fname');
+    chk('cm-lname',   function (v) { return v.length > 0; },                              'cm-err-lname');
+    chk('cm-email',   function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },     'cm-err-email');
+    chk('cm-message', function (v) { return v.length >= 10; },                            'cm-err-message');
+
+    return ok;
+  }
+
+  /* ── LOADING STATE ── */
+  function setLoading(on) {
+    if (submit)  submit.disabled       = on;
+    if (label)   label.textContent     = on ? 'Sending…' : 'Send message';
+    if (arrow)   arrow.style.display   = on ? 'none' : '';
+    if (spinner) spinner.style.display = on ? 'block' : 'none';
+  }
+
+  /* ── SHOW SUCCESS ── */
+  function showSuccess() {
+    /* hide form */
+    if (form) form.style.display = 'none';
+
+    /* create success block if it doesn't exist */
+    var existing = document.getElementById('cm-success');
+    if (existing) { existing.style.display = 'flex'; return; }
+
+    var box = document.createElement('div');
+    box.id = 'cm-success';
+    box.style.cssText =
+      'display:flex;flex-direction:column;align-items:center;justify-content:center;' +
+      'text-align:center;padding:40px 20px;gap:14px;animation:cm-fadein .5s ease;';
+
+    box.innerHTML =
+      '<div style="width:64px;height:64px;border-radius:50%;background:#f0fdf4;border:2px solid #86efac;' +
+        'display:flex;align-items:center;justify-content:center;animation:cm-pop .5s cubic-bezier(.34,1.56,.64,1)">' +
+        '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#22c55e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">' +
+          '<path d="M5 14l6 6L23 8"/>' +
+        '</svg>' +
+      '</div>' +
+      '<div style="font-size:20px;font-weight:700;color:#0d1b2e;letter-spacing:-.02em">Message sent!</div>' +
+      '<p style="font-size:14px;color:#64748b;line-height:1.65;max-width:280px">' +
+        'We\'ve received your message and will get back to you within 24 hours.' +
+      '</p>' +
+      '<button onclick="document.getElementById(\'cm-success\').remove();document.getElementById(\'cm-form\').style.display=\'\'" ' +
+        'style="font-size:13px;font-weight:500;color:#0284c7;background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0">' +
+        'Send another message' +
+      '</button>';
+
+    /* inject keyframes once */
+    if (!document.getElementById('cm-anim-style')) {
+      var s = document.createElement('style');
+      s.id = 'cm-anim-style';
+      s.textContent =
+        '@keyframes cm-fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}' +
+        '@keyframes cm-pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}';
+      document.head.appendChild(s);
+    }
+
+    form.parentNode.insertBefore(box, form.nextSibling);
+  }
+
+  /* ── SUBMIT ── */
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validate()) return;
+
+      /* ── BUILD PAYLOAD ── */
+      var payload = {
+        firstName:   (document.getElementById('cm-fname')   ? document.getElementById('cm-fname').value.trim()   : ''),
+        lastName:    (document.getElementById('cm-lname')   ? document.getElementById('cm-lname').value.trim()   : ''),
+        email:       (document.getElementById('cm-email')   ? document.getElementById('cm-email').value.trim()   : ''),
+        service:     (document.getElementById('cm-service') ? document.getElementById('cm-service').value        : ''),
+        message:     (document.getElementById('cm-message') ? document.getElementById('cm-message').value.trim() : ''),
+        submittedAt: new Date().toISOString(),
+      };
+
+      setLoading(true);
+
+      /* ── FETCH ── */
+      fetch(ENDPOINT, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Server error ' + res.status);
+        return res.json();
+      })
+      .then(function () {
+        setLoading(false);
+        showSuccess();
+      })
+      .catch(function (err) {
+        console.error('Contact form error:', err);
+        setLoading(false);
+        /* show inline error under button */
+        var existing = document.getElementById('cm-submit-err');
+        if (!existing) {
+          var errEl = document.createElement('p');
+          errEl.id = 'cm-submit-err';
+          errEl.style.cssText = 'font-size:12px;color:#ef4444;text-align:center;margin-top:8px;';
+          errEl.textContent = 'Something went wrong — please try again.';
+          submit.parentNode.insertBefore(errEl, submit.nextSibling);
+          setTimeout(function () { errEl.remove(); }, 4000);
+        }
+      });
+    });
+  }
+
+})();
