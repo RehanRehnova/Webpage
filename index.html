@@ -1213,16 +1213,16 @@
  
         <div class="cm-row">
           <div class="cm-field">
-            <label class="cm-label" for="cm-fname">First name <span>*</span></label>
-            <input class="cm-input" type="text" id="cm-fname" name="fname" placeholder="Ahmad" autocomplete="given-name">
+            <label class="cm-label" for="cm-fname">First name <span></span></label>
+            <input class="cm-input" type="text" id="cm-fname" name="fname"  autocomplete="given-name">
             <span class="cm-error-msg" id="cm-err-fname">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ef4444" stroke-width="1.4"/><path d="M6 4v3M6 8.5h.01" stroke="#ef4444" stroke-width="1.4" stroke-linecap="round"/></svg>
               Required
             </span>
           </div>
           <div class="cm-field">
-            <label class="cm-label" for="cm-lname">Last name <span>*</span></label>
-            <input class="cm-input" type="text" id="cm-lname" name="lname" placeholder="Karimi" autocomplete="family-name">
+            <label class="cm-label" for="cm-lname">Last name <span></span></label>
+            <input class="cm-input" type="text" id="cm-lname" name="lname"  autocomplete="family-name">
             <span class="cm-error-msg" id="cm-err-lname">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ef4444" stroke-width="1.4"/><path d="M6 4v3M6 8.5h.01" stroke="#ef4444" stroke-width="1.4" stroke-linecap="round"/></svg>
               Required
@@ -1231,33 +1231,27 @@
         </div>
  
         <div class="cm-field">
-          <label class="cm-label" for="cm-email">Email address <span>*</span></label>
+          <label class="cm-label" for="cm-email">Email address <span></span></label>
           <input class="cm-input" type="email" id="cm-email" name="email" placeholder="you@company.com" autocomplete="email">
           <span class="cm-error-msg" id="cm-err-email">
             <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ef4444" stroke-width="1.4"/><path d="M6 4v3M6 8.5h.01" stroke="#ef4444" stroke-width="1.4" stroke-linecap="round"/></svg>
             Enter a valid email address
           </span>
         </div>
- 
+       
         <div class="cm-field">
-          <label class="cm-label" for="cm-service">Service needed</label>
-          <div class="cm-select-wrap">
-            <select class="cm-select" id="cm-service" name="service">
-              <option value="" disabled selected>Select a service…</option>
-              <option value="crm">CRM Development</option>
-              <option value="ai">AI Chatbot / Agent</option>
-              <option value="web">Web Platform / SaaS</option>
-              <option value="automation">Automation</option>
-              <option value="analytics">Analytics Dashboard</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+          <label class="cm-label" for="cm-subject">Subject<span></span></label>
+          <input class="cm-input" type="text" id="cm-subject" name="subject" >
+          <span class="cm-error-msg" id="cm-err-email">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ef4444" stroke-width="1.4"/><path d="M6 4v3M6 8.5h.01" stroke="#ef4444" stroke-width="1.4" stroke-linecap="round"/></svg>
+            
+          </span>
         </div>
  
         <div class="cm-field">
-          <label class="cm-label" for="cm-message">Message <span>*</span></label>
+          <label class="cm-label" for="cm-message">Message <span></span></label>
           <textarea class="cm-textarea" id="cm-message" name="message" placeholder="Tell us about your project, timeline, and goals…" maxlength="600"></textarea>
-          <div class="cm-char-count" id="cm-chars">0 / 600</div>
+          
           <span class="cm-error-msg" id="cm-err-message">
             <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ef4444" stroke-width="1.4"/><path d="M6 4v3M6 8.5h.01" stroke="#ef4444" stroke-width="1.4" stroke-linecap="round"/></svg>
             Please write a brief message
@@ -1513,8 +1507,8 @@
           <h3 class="bm-sh">About yourself</h3>
           <p class="bm-ss">A quick intro helps us brief the right person for your call.</p>
           <div class="bm-row">
-            <div class="bm-field"><label class="bm-lbl" for="bm-fn">First name <span>*</span></label><input class="bm-input" type="text" id="bm-fn" placeholder="Ahmad" autocomplete="given-name" autocorrect="off"><span class="bm-err" id="bm-e-fn">Required</span></div>
-            <div class="bm-field"><label class="bm-lbl" for="bm-ln">Last name <span>*</span></label><input class="bm-input" type="text" id="bm-ln" placeholder="Karimi" autocomplete="family-name" autocorrect="off"><span class="bm-err" id="bm-e-ln">Required</span></div>
+            <div class="bm-field"><label class="bm-lbl" for="bm-fn">First name <span>*</span></label><input class="bm-input" type="text" id="bm-fn"  autocomplete="given-name" autocorrect="off"><span class="bm-err" id="bm-e-fn">Required</span></div>
+            <div class="bm-field"><label class="bm-lbl" for="bm-ln">Last name <span>*</span></label><input class="bm-input" type="text" id="bm-ln"  autocomplete="family-name" autocorrect="off"><span class="bm-err" id="bm-e-ln">Required</span></div>
           </div>
           <div class="bm-field"><label class="bm-lbl" for="bm-em">Work email <span>*</span></label><input class="bm-input" type="email" id="bm-em" placeholder="you@company.com" autocomplete="email" autocapitalize="off"><span class="bm-err" id="bm-e-em">Enter a valid email</span></div>
           <div class="bm-field"><label class="bm-lbl" for="bm-ph">Phone</label><input class="bm-input" type="tel" id="bm-ph" placeholder="+1 234 567 890" autocomplete="tel"></div>

@@ -780,9 +780,10 @@ document.getElementById("close-book-model").addEventListener("click", () => {
         firstName:   (document.getElementById('cm-fname')   ? document.getElementById('cm-fname').value.trim()   : ''),
         lastName:    (document.getElementById('cm-lname')   ? document.getElementById('cm-lname').value.trim()   : ''),
         email:       (document.getElementById('cm-email')   ? document.getElementById('cm-email').value.trim()   : ''),
-        service:     (document.getElementById('cm-service') ? document.getElementById('cm-service').value        : ''),
+        subject:       (document.getElementById('cm-subject')   ? document.getElementById('cm-subject').value.trim()   : ''),
         message:     (document.getElementById('cm-message') ? document.getElementById('cm-message').value.trim() : ''),
         submittedAt: new Date().toISOString(),
+        type: " Form Message"
       };
 
       setLoading(true);
@@ -795,12 +796,15 @@ document.getElementById("close-book-model").addEventListener("click", () => {
       })
       .then(function (res) {
         if (!res.ok) throw new Error('Server error ' + res.status);
-        return res.json();
-      })
-      .then(function () {
-        setLoading(false);
+        
+       else{
+         setLoading(false);
         showSuccess();
+       }
+       return res.json()
+        
       })
+      
       .catch(function (err) {
         console.error('Contact form error:', err);
         setLoading(false);
