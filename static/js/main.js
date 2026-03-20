@@ -783,7 +783,7 @@ document.getElementById("close-book-model").addEventListener("click", () => {
         subject:       (document.getElementById('cm-subject')   ? document.getElementById('cm-subject').value.trim()   : ''),
         message:     (document.getElementById('cm-message') ? document.getElementById('cm-message').value.trim() : ''),
         submittedAt: new Date().toISOString(),
-        type: " Form Message"
+        type: "Form Message"
       };
 
       setLoading(true);
