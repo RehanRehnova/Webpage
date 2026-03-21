@@ -330,13 +330,11 @@ console.log("JS FILE LOADED");
   
 // bookig modal 
 window.BookingModal = (function(){
-    console.log("clicked")
   'use strict';
 
   /* ── CONFIG — CHANGE THESE ── */
   var LEAD_ENDPOINT = 'https://qbs.onrender.com/webhook/booking-path';
-  var ALL_TIMES     = ['09:00','09:30','10:00','10:30','11:00','11:30','13:00','13:30','14:00','14:30','15:00','15:30'];
-  var MONTHS        = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
   /* ── END CONFIG ── */
 
   var overlay   = document.getElementById('bm-overlay');
@@ -469,57 +467,7 @@ window.BookingModal = (function(){
   document.getElementById('bm-consent').addEventListener('click',function(){ this.classList.toggle('checked'); });
 
   /* ── CALENDAR ── */
-  function buildCal(){
-    var grid=document.getElementById('bm-cal-grid');
-    document.getElementById('bm-cal-mo').textContent=MONTHS[calDate.getMonth()]+' '+calDate.getFullYear();
-    grid.innerHTML='';
-    ['Su','Mo','Tu','We','Th','Fr','Sa'].forEach(function(d){
-      var s=document.createElement('div'); s.className='bm-cal-dow'; s.textContent=d; grid.appendChild(s);
-    });
-    var today=new Date(); today.setHours(0,0,0,0);
-    var first=new Date(calDate.getFullYear(),calDate.getMonth(),1).getDay();
-    var days=new Date(calDate.getFullYear(),calDate.getMonth()+1,0).getDate();
-    for(var i=0;i<first;i++){
-      var e=document.createElement('div'); e.className='bm-cal-day empty'; grid.appendChild(e);
-    }
-    for(var d=1;d<=days;d++){
-      var cell=document.createElement('div'); cell.className='bm-cal-day'; cell.textContent=d;
-      var dt=new Date(calDate.getFullYear(),calDate.getMonth(),d);
-      if(dt<today) cell.classList.add('past');
-      else {
-        if(dt.getTime()===today.getTime()) cell.classList.add('today');
-        if(S.date===dt.toDateString()) cell.classList.add('sel');
-        (function(date,el){
-          el.addEventListener('click',function(){
-            S.date=date.toDateString(); S.time=null;
-            document.querySelectorAll('.bm-cal-day').forEach(function(x){x.classList.remove('sel');});
-            el.classList.add('sel'); buildTimes();
-          });
-        })(dt,cell);
-      }
-      grid.appendChild(cell);
-    }
-    buildTimes();
-  }
-
-  function buildTimes(){
-    var wrap=document.getElementById('bm-times-grid'); wrap.innerHTML='';
-    ALL_TIMES.forEach(function(t){
-      var s=document.createElement('div'); s.className='bm-time'; s.textContent=t;
-      if(BOOKED_TIMES.indexOf(t)>-1) s.classList.add('booked');
-      else {
-        if(S.time===t) s.classList.add('sel');
-        s.addEventListener('click',function(){
-          document.querySelectorAll('.bm-time').forEach(function(x){x.classList.remove('sel');});
-          s.classList.add('sel'); S.time=t;
-        });
-      }
-      wrap.appendChild(s);
-    });
-  }
-
-  document.getElementById('bm-cal-prev').addEventListener('click',function(){ calDate.setMonth(calDate.getMonth()-1); buildCal(); });
-  document.getElementById('bm-cal-next').addEventListener('click',function(){ calDate.setMonth(calDate.getMonth()+1); buildCal(); });
+  
 
   /* ── REVIEW ── */
   var ICONS={
@@ -568,8 +516,6 @@ window.BookingModal = (function(){
       services:      S.svcs.slice(),
       budget:        S.budget,
       brief:         (document.getElementById('bm-br').value||'').trim(),
-      scheduledDate: S.date,
-      scheduledTime: S.time,
       submittedAt:   new Date().toISOString()
     };
 
@@ -594,12 +540,7 @@ window.BookingModal = (function(){
       /* SUCCESS */
       cur=5; prog(); show(5,false);
       var box=document.getElementById('bm-sbox');
-      if(box) box.innerHTML=
-        '<div class="bm-si"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5l2 1.5"/></svg><span><strong>'+S.date+' at '+S.time+'</strong></span></div>'+
-        '<div class="bm-sdiv"></div>'+
-        '<div class="bm-si"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="3" width="14" height="10" rx="2"/><path d="M1 5l7 5 7-5"/></svg><span>Invite sent to <strong>'+(document.getElementById('bm-em').value)+'</strong></span></div>'+
-        '<div class="bm-sdiv"></div>'+
-        '<div class="bm-si"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 1.5l5 5a2 2 0 0 1 0 2.83l-4 4a2 2 0 0 1-2.83 0l-5-5V1.5h7z"/><circle cx="4.5" cy="5" r="1"/></svg><span>Focus: <strong>'+(S.svcs[0]||'General consultation')+'</strong></span></div>';
+      
     })
     .catch(function(err){
       console.error('BookingModal API error:', err);
@@ -620,11 +561,6 @@ window.BookingModal = (function(){
     nextBtn.appendChild(r); setTimeout(function(){r.remove();},600);
 
     if(cur===1 && !v1()) return;
-
-    if(cur===3 && (!S.date || !S.time)){
-      toast('Please pick a date and time ☝️');
-      return;
-    }
 
     if(cur===4){
       /* fire API */

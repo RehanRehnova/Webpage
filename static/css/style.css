@@ -3399,7 +3399,7 @@
 .bm-btn-bk:active { background:var(--bm-surf); transform:scale(.93); }
 .bm-btn-bk svg { width:18px; height:18px; }
 .bm-btn-nx {
-  flex:1; height:50px;
+  flex:1; height:50px; width: 10px;
   display:flex; align-items:center; justify-content:center; gap:8px;
   font-family:'Syne',sans-serif; font-size:13.5px; font-weight:700;
   color:white; background:var(--bm-blue);
