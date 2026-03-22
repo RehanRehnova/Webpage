@@ -1,5 +1,5 @@
 {
-    "cleanUrls":"true",
+    "cleanUrls": true,
     "rewrites":[{"source":"/home", "destination":"/index.html"},
 {"source":"/agents", "destination": "/service-ai-agents.html"},
 {"source":"/chatbots", "destination": "/service-ai-chatbots.html"},
