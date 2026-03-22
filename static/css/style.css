@@ -57,7 +57,8 @@
     h2,
     h3,
     h4 {
-      font-family: 'quicksand', sans-serif;
+      font-family: 'Google Sans Flex', sans-serif;
+      font-weight: 500;
     }
 
     ::-webkit-scrollbar {
@@ -118,11 +119,14 @@
     }
 
     .nav-brand {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-weight: 700;
+      font-family: 'Google Sans Flex', sans-serif;
+      font-weight: 500;
       font-size: 1.05rem;
       color: var(--text);
       letter-spacing: -0.02em;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
 
     .nav-brand span {
@@ -218,7 +222,7 @@
     }
 
     .mobile-nav a {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Google Sans Flex', sans-serif;
       font-size: 1.9rem;
       font-weight: 700;
       color: var(--text);
@@ -351,7 +355,7 @@
 
     .hero h1 {
       font-size: clamp(2.8rem, 5.5vw, 5rem);
-      font-weight: 800;
+      font-weight: 600;
       line-height: 1.05;
       letter-spacing: -0.04em;
       margin-bottom: 24px;
@@ -676,6 +680,10 @@
     }
 
     .marquee-track.reverse {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      gap: 0;
       animation: scroll-right var(--speed-reverse) linear infinite;
     }
 
@@ -772,7 +780,7 @@
 
     .s-title {
       font-size: clamp(1.9rem, 3.5vw, 3rem);
-      font-weight: 800;
+      font-weight: 500;
       letter-spacing: -0.03em;
       line-height: 1.1;
       margin-bottom: 18px;
@@ -1722,7 +1730,7 @@
 
     .cta-box h2 {
       font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-      font-weight: 800;
+      font-weight: 500;
       color: white;
       line-height: 1.1;
       letter-spacing: -0.03em;
@@ -1969,10 +1977,14 @@
     }
 
     .foot-brandname {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-weight: 700;
+      font-family: 'Google Sans Flex', sans-serif;
+      font-weight: 500;
       font-size: 1.05rem;
       color: white;
+      letter-spacing: -0.02em;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
 
     .foot-brandname span {
@@ -1982,7 +1994,7 @@
     .foot-desc {
       font-size: 0.85rem;
       line-height: 1.75;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.8);
       max-width: 280px;
       margin-bottom: 24px;
     }
@@ -2016,7 +2028,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 18px;
     }
 
@@ -2028,7 +2040,7 @@
     }
 
     .foot-links a {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgb(255, 255, 255, 0.4);
       text-decoration: none;
       font-size: 0.85rem;
       transition: color 0.2s;
@@ -2551,9 +2563,10 @@
   .ws-dynamic {
     position: relative;
     display: inline-block;
-    font-style: italic;
+    font-style: none;
     color: #0284c7;
     min-width: 2em;
+    font-weight: 600;
     transition: min-width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
