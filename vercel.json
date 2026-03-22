@@ -1,0 +1,9 @@
+{
+    "cleanUrls":"true",
+    "rewrites":[{"source":"/home", "destination":"/index.html"},
+{"source":"/agents", "destination": "/service-ai-agents.html"},
+{"source":"/chatbots", "destination": "/service-ai-chatbots.html"},
+{"source":"/integrations", "destination": "/service-api-integrations.html"},
+{"source":"/management-sys", "destination": "/service-management-systems.html"},
+{"source":"/web-development", "destination": "/web-developemnt-service.html"}]
+}
