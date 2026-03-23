@@ -6,9 +6,15 @@
 <title>Custom Web Development — Rehnova Digitals</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+ <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Orbitron:wght@400..900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Oxanium:wght@200..800&display=swap"
+    rel="stylesheet">
+
 <link rel="stylesheet" href="static/css/details-pages.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
+
 </head>
 <body>
 
@@ -18,7 +24,7 @@
       <div class="nav-logo-mark">
         <img src="https://res.cloudinary.com/dhcayqpqr/image/upload/v1773966188/20260320_052132_0000_evrmup.png" style="height: 50px;" alt="">
       </div>
-      <span class="nav-brand">Rehnova <span>Digitals</span></span>
+      <span class="nav-brand">Rehnova <span style="font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 15px;">Digitals</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="/#services">Services</a></li>
@@ -104,14 +110,14 @@
     <!-- LEFT -->
     <div class="hero-left">
       <div class="breadcrumb">
-        <a href="rehnova-blue.html">Home</a>
+        <a href="/">Home</a>
         <span class="breadcrumb-sep">›</span>
-        <a href="rehnova-blue.html#services">Services</a>
+        <a href="/#services">Services</a>
         <span class="breadcrumb-sep">›</span>
-        <span style="color:var(--text);font-weight:600;">Web Development</span>
+        <span style="color:var(--text);font-weight:400;">Web Development</span>
       </div>
       <div class="svc-eyebrow"><div class="svc-eyebrow-dot"></div>Service 01 of 06</div>
-      <h1>Custom <em>Web</em><br>Development</h1>
+      <h1>Custom <span style="color:#0ea5e9;">Web</span><br>Development</h1>
       <p class="svc-hero-desc">Scalable, fast, pixel-perfect web applications engineered to your exact requirements. MVPs to enterprise platforms — built right, built to last.</p>
       <div class="hero-tags">
         <span class="s-tag">React</span>
@@ -122,11 +128,11 @@
         <span class="s-tag">TypeScript</span>
       </div>
       <div class="hero-actions">
-        <a href="rehnova-blue.html#cta" class="btn-primary">
+        <a href="/#cta" class="btn-primary">
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5h10M8 3l4.5 4.5L8 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Start Your Project
         </a>
-        <a href="#packages" class="btn-secondary">View Packages</a>
+       
       </div>
     </div>
 
@@ -226,7 +232,7 @@
   <div class="process-wrap" style="position:relative;z-index:1">
     <div class="process-steps-col reveal-l">
       <div class="s-label">Our Process</div>
-      <h2 class="s-title">How We<br><em>Build It</em></h2>
+      <h2 class="s-title">How We<br><span class="grad">Build It</span></h2>
       <p class="s-desc" style="margin-bottom:0;margin-top:10px">Six transparent stages, live staging every sprint, and zero surprises from kickoff to launch.</p>
       <div class="steps-list">
         <button class="step-btn active" data-step="0">
@@ -320,64 +326,6 @@
   </div>
 </section>
 
-<!-- ── PACKAGES ── -->
-<section id="packages" class="section-pad">
-  <svg class="pkg-bg" viewBox="0 0 1440 680" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="pkgr2" cx="50%" cy="45%" r="58%"><stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.2"/><stop offset="100%" stop-color="#bfdbfe" stop-opacity="0"/></radialGradient></defs><rect width="1440" height="680" fill="url(#pkgr2)"/></svg>
-  <div class="pkg-header reveal">
-    <div class="s-label" style="justify-content:center">Packages</div>
-    <h2 class="s-title">Transparent <span class="grad">Pricing</span></h2>
-    <p class="s-desc">Fixed prices, full code ownership, and post-launch support in every package.</p>
-  </div>
-  <div class="pkg-grid">
-    <div class="pkg-card reveal" style="transition-delay:.06s">
-      <div class="pkg-tier">Starter</div>
-      <div class="pkg-name">Landing Page</div>
-      <div class="pkg-desc">For startups that need a compelling online presence to start acquiring customers fast.</div>
-      <ul class="pkg-feats">
-        <li>Custom responsive landing page</li>
-        <li>Up to 6 content sections</li>
-        <li>CMS integration (Sanity / Contentful)</li>
-        <li>Contact form + email routing</li>
-        <li>SEO meta + sitemap</li>
-        <li>2 revision rounds</li>
-        <li>30-day post-launch support</li>
-      </ul>
-      <a href="rehnova-blue.html#cta" class="pkg-btn pkg-btn-light">From $2,999 — Get Started</a>
-    </div>
-    <div class="pkg-card featured reveal" style="transition-delay:.12s">
-      <div class="pkg-badge">Most Popular</div>
-      <div class="pkg-tier">Growth</div>
-      <div class="pkg-name">Full-Stack App</div>
-      <div class="pkg-desc">A complete, production-ready web application with auth, dashboard, admin panel, and integrations.</div>
-      <ul class="pkg-feats">
-        <li>Custom full-stack application</li>
-        <li>Auth, user roles, dashboard</li>
-        <li>Admin panel + CMS</li>
-        <li>Up to 5 API integrations</li>
-        <li>CI/CD pipeline + Docker</li>
-        <li>Unlimited revisions</li>
-        <li>90-day post-launch support</li>
-        <li>Performance audit report</li>
-      </ul>
-      <a href="rehnova-blue.html#cta" class="pkg-btn pkg-btn-white">From $7,999 — Start Now</a>
-    </div>
-    <div class="pkg-card reveal" style="transition-delay:.18s">
-      <div class="pkg-tier">Enterprise</div>
-      <div class="pkg-name">Platform</div>
-      <div class="pkg-desc">Bespoke, large-scale platform with microservices architecture and SLA-backed delivery.</div>
-      <ul class="pkg-feats">
-        <li>Custom architecture design</li>
-        <li>Microservices / monorepo</li>
-        <li>Multi-tenant SaaS support</li>
-        <li>Unlimited integrations</li>
-        <li>Dedicated dev team</li>
-        <li>99.9% uptime SLA</li>
-        <li>12-month support contract</li>
-      </ul>
-      <a href="rehnova-blue.html#cta" class="pkg-btn pkg-btn-light">Custom Quote — Contact Us</a>
-    </div>
-  </div>
-</section>
 
 <!-- ── FAQ ── -->
 <section id="faq" class="section-pad">
@@ -386,7 +334,7 @@
       <div class="s-label">FAQ</div>
       <h2 class="s-title">Common <span class="grad">Questions</span></h2>
       <p class="faq-side-desc">Quick answers about our web development service. Still have questions?</p>
-      <a href="rehnova-blue.html#cta" class="btn-primary" style="display:inline-flex">
+      <a href="/#sendMsg" class="btn-primary" style="display:inline-flex">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Ask Us Directly
       </a>
@@ -425,12 +373,11 @@
   <div class="cta-box reveal">
     <div class="cta-text">
       <div class="cta-over">Ready to Build?</div>
-      <h2>Let's Turn Your Idea<br>Into a <em>Real Product</em></h2>
+      <h2>Let's Turn Your Idea<br>Into a <span class="grad">Real Product</span></h2>
       <p>Tell us about your project. We'll send a detailed proposal within 24 hours — no commitment needed.</p>
     </div>
     <div class="cta-btns">
-      <a href="mailto:hello@rehnovadigitals.com" class="btn-white-solid">Start Your Project →</a>
-      <a href="rehnova-blue.html#cta" class="btn-ghost">Book a Free Call</a>
+      <a href="/#cta" class="btn-white-solid">Start Your Project →</a>
     </div>
   </div>
 </section>
@@ -517,7 +464,7 @@
           <div class="foot-logo-mark">
            <img src="https://res.cloudinary.com/dhcayqpqr/image/upload/v1773966188/20260320_052132_0000_evrmup.png" style="height: 50px;" alt="">
           </div>
-          <span class="foot-brandname">Rehnova <span>Digitals</span></span>
+          <span class="foot-brandname">Rehnova <span style="font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 15px;">Digitals</span></span>
         </a>
         <p class="foot-desc">We build digital solutions that move businesses forward — from custom web apps and AI
           chatbots to enterprise management systems.</p>
