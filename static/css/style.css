@@ -632,7 +632,7 @@
     @keyframes slideUp {
       from {
         opacity: 0;
-        transform: translateY(22px)
+        transform: translateY(50px)
       }
 
       to {
